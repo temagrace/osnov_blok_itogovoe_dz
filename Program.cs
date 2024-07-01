@@ -20,20 +20,32 @@ void PrintArray(string[] array)
 PrintArray(origArray);
 
 
-string[] newArray(string[] array)
-{
-    int j = 0;
-    string[] newArray = new string[j];
+// string[] newArray(string[] array)
+// {
+//     int j = 0;
+//     string[] newArray = new string[j];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i].Length <= 3)
+//         {
+//             newArray[j] = array[i];
+//             j++;
+//         }
+
+//     }
+//     return newArray;
+// }
+// string[] newOrigArray = newArray(origArray);
+// PrintArray(newOrigArray);
+ int indexNewArray( string[] array)
+ {
+    int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i].Length <= 3)
         {
-            newArray[j] = array[i];
-            j++;
+            count++;
         }
-
     }
-    return newArray;
-}
-string[] newOrigArray = newArray(origArray);
-PrintArray(newOrigArray);
+    return count;
+ }
