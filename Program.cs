@@ -1,4 +1,6 @@
-﻿System.Console.WriteLine("Ведите количество строк: " );
+﻿
+// содание исходного массива строк
+System.Console.WriteLine("Ведите количество строк: " );
 int line = Convert.ToInt32(Console.ReadLine());
 
 System.Console.WriteLine("Введите строки: " );
@@ -16,3 +18,22 @@ void PrintArray(string[] array)
     }
 }
 PrintArray(origArray);
+
+
+string[] newArray(string[] array)
+{
+    int j = 0;
+    string[] newArray = new string[j];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+
+    }
+    return newArray;
+}
+string[] newOrigArray = newArray(origArray);
+PrintArray(newOrigArray);
